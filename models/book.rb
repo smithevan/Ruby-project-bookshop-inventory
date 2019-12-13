@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner' )
 class Book
 
   attr_reader :id
-  attr_accessor :name, :description, :quantity, :price, :cost, :publisher_id 
+  attr_accessor :name, :description, :quantity, :price, :cost, :publisher_id
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -22,10 +22,12 @@ class Book
     quantity,
     price,
     cost,
-    publisher_id) VALUES ($1, $2, $3, $4, $5) RETURNING id;"
+    publisher_id) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id;"
     values = [@name, @description, @quantity, @price, @cost, @publisher_id]
     @id = SqlRunner.run(sql, values)[0]["id"].to_i
   end
+
+
 
 
 
