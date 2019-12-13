@@ -32,6 +32,12 @@ class Publisher
     SqlRunner.run(sql, values)
   end
 
+  def update()
+    sql = "UPDATE publishers SET name = ($1) WHERE id = $2"
+    values = [@name, @id]
+    SqlRunner.run(sql, values)
+  end
+
 
 
 end
