@@ -15,5 +15,5 @@ CREATE TABLE books
   quantity INT,
   price FLOAT,
   cost FLOAT,
-  publisher_id INT
+  publisher_id INT references publishers(id)
 );
