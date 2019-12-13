@@ -15,5 +15,5 @@ CREATE TABLE books
   quantity INT,
   price FLOAT,
   cost FLOAT,
-  publisher_id INT references publishers(id)
+  publisher_id INT references publishers(id) ON DELETE CASCADE 
 );
