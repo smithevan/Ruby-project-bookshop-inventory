@@ -8,7 +8,7 @@ class Book
   def initialize( options )
     @id = options['id'].to_i if options['id']
     @name = options['name']
-    @description = options['name']
+    @description = options['description']
     @quantity = options['quantity'].to_i
     @price = options['price'].to_f
     @cost = options['cost'].to_f
@@ -41,6 +41,18 @@ class Book
   def delete()
     sql = "DELETE FROM books WHERE id = $1"
     values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+  def update()
+    sql = "UPDATE books SET (
+    name,
+    description,
+    quantity,
+    price,
+    cost,
+    publisher_id) = ($1, $2, $3, $4, $5, $6) WHERE id = $7"
+    values = [@name, @description, @quantity, @price, @cost, @publisher_id, @id]
     SqlRunner.run(sql, values)
   end
 

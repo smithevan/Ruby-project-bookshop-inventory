@@ -27,8 +27,7 @@ book1 = Book.new({
 
 book2 = Book.new({
     "name" => "Jane Eyre",
-    "description" => "Victorian novel following the new employment of a
-    governess where all is not as it seems",
+    "description" => "Victorian novel",
     "quantity" => 3,
     "price" => 7.99,
     "cost" => 3.00,
