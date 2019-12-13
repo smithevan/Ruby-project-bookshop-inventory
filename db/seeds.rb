@@ -24,6 +24,8 @@ book1 = Book.new({
   "publisher_id" => publisher1.id
   })
 
+book1.save()
+
 
 binding.pry
 nil
