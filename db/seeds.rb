@@ -15,6 +15,14 @@ publisher2 = Publisher.new({
 publisher1.save()
 publisher2.save()
 
+book1 = Book.new({
+  "name" => "Dracula"
+  "description" => "Classic gothic horror novel.",
+  "quantity" => 3,
+  "price" => 8.99,
+  "cost" => 3.00
+  })
+
 
 binding.pry
 nil
