@@ -3,6 +3,7 @@ require_relative( "../models/publisher.rb" )
 require 'pry'
 
 Publisher.delete_all()
+Book.delete_all()
 
 publisher1 = Publisher.new({
   "name" => "Penguin"
@@ -24,7 +25,18 @@ book1 = Book.new({
   "publisher_id" => publisher1.id
   })
 
+book2 = Book.new({
+    "name" => "Jane Eyre",
+    "description" => "Victorian novel following the new employment of a
+    governess where all is not as it seems",
+    "quantity" => 3,
+    "price" => 7.99,
+    "cost" => 3.00,
+    "publisher_id" => publisher2.id
+    })
+
 book1.save()
+book2.save()
 
 
 binding.pry
