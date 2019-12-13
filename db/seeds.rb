@@ -2,6 +2,8 @@ require_relative( "../models/book.rb" )
 require_relative( "../models/publisher.rb" )
 require 'pry'
 
+Publisher.delete_all()
+
 publisher1 = Publisher.new({
   "name" => "Penguin"
   })
