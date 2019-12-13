@@ -21,7 +21,10 @@ class Publisher
     return results.map { |publisher| Publisher.new( publisher ) }
   end
 
-  
+  def self.delete_all()
+    sql = "DELETE FROM publishers"
+    SqlRunner.run(sql)
+  end
 
 
 

@@ -6,6 +6,13 @@ publisher1 = Publisher.new({
   "name" => "Penguin"
   })
 
+publisher2 = Publisher.new({
+  "name" => "Oxford University Press"
+  })
+
+publisher1.save()
+publisher2.save()
+
 
 binding.pry
 nil
