@@ -38,4 +38,13 @@ class Author
     SqlRunner.run(sql, values)
   end
 
+  def update()
+    sql = "UPDATE authors SET (
+    first_name,
+    last_name,
+    publisher_id) = ($1, $2, $3) WHERE id = $4"
+    values = [@first_name, @last_name, @publisher_id, @id]
+    SqlRunner.run(sql, values)
+  end
+
 end

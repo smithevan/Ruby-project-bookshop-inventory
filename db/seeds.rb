@@ -3,6 +3,7 @@ require_relative( "../models/publisher.rb" )
 require_relative( "../models/author.rb")
 require 'pry'
 
+Author.delete_all()
 Publisher.delete_all()
 Book.delete_all()
 
