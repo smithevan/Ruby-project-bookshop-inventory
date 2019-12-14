@@ -25,7 +25,7 @@ CREATE TABLE authors
   id SERIAL primary key,
   first_name VARCHAR(255) not null,
   last_name VARCHAR(255) not null,
-  publisher_id INT references publishers(id)
+  publisher_id INT references publishers(id) ON DELETE CASCADE 
 );
 
 CREATE TABLE authors_books

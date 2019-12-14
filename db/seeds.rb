@@ -42,6 +42,11 @@ author1 = Author.new({
   "publisher_id" => publisher1.id
   })
 
+author1.save()
+
+
+
+
 
 binding.pry
 nil
