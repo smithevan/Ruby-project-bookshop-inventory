@@ -1,5 +1,6 @@
 require_relative( "../models/book.rb" )
 require_relative( "../models/publisher.rb" )
+require_relative( "../models/author.rb")
 require 'pry'
 
 Publisher.delete_all()
@@ -21,8 +22,7 @@ book1 = Book.new({
   "description" => "Classic gothic horror novel.",
   "quantity" => 3,
   "price" => 8.99,
-  "cost" => 3.00,
-  "publisher_id" => publisher1.id
+  "cost" => 3.00
   })
 
 book2 = Book.new({
@@ -30,12 +30,17 @@ book2 = Book.new({
     "description" => "Victorian novel",
     "quantity" => 3,
     "price" => 7.99,
-    "cost" => 3.00,
-    "publisher_id" => publisher2.id
+    "cost" => 3.00
     })
 
 book1.save()
 book2.save()
+
+author1 = Author.new({
+  "first_name" => "Charlotte",
+  "last_name" => "Bronte",
+  "publisher_id" => publisher1.id
+  })
 
 
 binding.pry

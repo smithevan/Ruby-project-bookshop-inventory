@@ -12,4 +12,13 @@ class Author
     @publisher_id = options['publisher_id'].to_i
   end
 
-end 
+  def save()
+    sql = "INSERT INTO authors (
+    first_name,
+    last_name,
+    publisher_id) VALUES ($1, $2, $3) RETURNING id;"
+    values = [@first_name, @last_name, @publisher_id]
+    @id = SqlRunner.run(sql, values)[0]["id"].to_i
+  end
+
+end
