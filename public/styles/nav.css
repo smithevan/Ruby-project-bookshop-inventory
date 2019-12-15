@@ -1,8 +1,7 @@
 .navbar {
 
-   background-color: rgb(184, 212, 240, 0.80);
+   background-color: rgb(104, 161, 128);
    display: inline-block;
-
    width: 100%;
 }
 
@@ -12,14 +11,13 @@
   font-size: 25px;
   letter-spacing: 4px;
   display: inline-block;
-  background-color: white;
+  background-color: rgb(130, 223, 171);
   margin-left: 100px;
   margin-right: 50px;
   padding: 8px 8px;
 }
 
 .navbar a {
-  font-family: 'Lato';
   font-size: 25px;
   display: inline-block;
   color: black;
@@ -27,4 +25,8 @@
   cursor: pointer;
   list-style-type: none;
 
+}
+
+.navbar a:hover {
+  color: grey;
 }
