@@ -1,0 +1,14 @@
+<h1>Publisher</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+  <% for publisher in @publishers %>
+  <tr>
+    <td><a href="/publishers/<%= publisher.id %>"><%= publisher.name %></a></td>
+    <td>|</td>
+  </tr>
+  <% end %>
+</table>
