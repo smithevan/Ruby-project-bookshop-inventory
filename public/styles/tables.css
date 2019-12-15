@@ -1,16 +1,28 @@
 td, th {
-  text-align: left;
+  text-align: center;
+  font-family: arial;
+
 }
 
 td {
   padding: 10px 20px 0px 0px;
+
+  
 }
 
 th {
   padding: 0px 20px 10px 0px;
-  border: 1px 1px 1px 1px solid black;
+
+  font-family: arial;
 }
 
 table {
-  border-collapse: collapse;
+  border: 2px solid black;
+  font-family: arial;
+  background-color: lightgrey;
+
+}
+
+tr:hover{
+  background-color: lightblue;
 }
