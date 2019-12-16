@@ -10,3 +10,13 @@ get '/publishers' do
   @publishers = Publisher.all()
   erb ( :"publishers/index" )
 end
+
+get '/publishers/:id' do
+  @publishers = Publisher.find(params['id'].to_i)
+  erb(:"publishers/show")
+end
+
+post '/publishers/:id' do
+  Publisher.new(params).update
+  redirect to '/publishers'
+end

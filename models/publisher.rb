@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner' )
 class Publisher
 
   attr_reader :id
-  attr_accessor :name 
+  attr_accessor :name
 
   def initialize( options )
     @id = options['id'].to_i if options['id']
@@ -37,6 +37,14 @@ class Publisher
     sql = "UPDATE publishers SET name = ($1) WHERE id = $2"
     values = [@name, @id]
     SqlRunner.run(sql, values)
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM publishers
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values )
+    return Publisher.new( results.first )
   end
 
 

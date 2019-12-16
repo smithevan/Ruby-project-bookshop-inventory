@@ -6,7 +6,7 @@
     <th></th>
   </tr>
   <% for publisher in @publishers %>
-  <tr>
+  <tr onclick="location.href='/publishers/<%= publisher.id %>'"><a href="/publishers/<%= publisher.id %>"></a>
     <td><a href="/publishers/<%= publisher.id %>"><%= publisher.name %></a></td>
   </tr>
   <% end %>
