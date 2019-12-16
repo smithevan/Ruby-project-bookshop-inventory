@@ -12,7 +12,7 @@ get '/books' do
 end
 
 get '/books/new' do
-  @books = Book.all()
+  # @author = Author.all()
   erb ( :"books/new" )
 end
 
@@ -27,7 +27,7 @@ post '/books/:id' do
 end
 
 post '/books' do
-  @books = Book.new( params )
-  @books.save()
-  erb ( :create )
+  books = Book.new( params )
+  books.save()
+  redirect to '/books'
 end

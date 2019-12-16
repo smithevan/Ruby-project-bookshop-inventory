@@ -1,10 +1,10 @@
 <nav class="navbar">
   <ul>
     <li>
-      <a href="/publisher/new/">Add New Publisher</a>
+      <a href="/publishers/new">Add New Publisher</a>
     </li>
     <li>
-      <a href="/publisher/delete">Delete Publisher</a>
+      <a href="/publishers/delete">Delete Publisher</a>
     </li>
   </ul>
 </nav>
@@ -18,7 +18,7 @@
   </tr>
   <% for publisher in @publishers %>
   <tr>
-    <td><a href="/publishers/<%= publisher.id %>"><%= publisher.name %></a></td>
+    <td><%= publisher.name %></td>
   </tr>
   <% end %>
 </table>

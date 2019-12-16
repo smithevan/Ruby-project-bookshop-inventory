@@ -11,6 +11,10 @@ get '/publishers' do
   erb ( :"publishers/index" )
 end
 
+get '/publishers/new/?' do
+  erb ( :"publishers/new" )
+end
+
 get '/publishers/:id' do
   @publishers = Publisher.find(params['id'].to_i)
   erb(:"publishers/show")
