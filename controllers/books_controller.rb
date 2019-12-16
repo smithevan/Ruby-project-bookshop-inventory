@@ -12,7 +12,7 @@ get '/books' do
 end
 
 get '/books/new' do
-  @book = Book.all
+  @books = Book.all()
   erb ( :"books/new" )
 end
 

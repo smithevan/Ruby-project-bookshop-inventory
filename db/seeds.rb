@@ -18,8 +18,33 @@ publisher2 = Publisher.new({
   "name" => "Oxford University Press"
   })
 
+publisher3 = Publisher.new({
+  "name" => "Harper Collins"
+  })
+
+publisher4 = Publisher.new({
+  "name" => "Random House"
+  })
+
 publisher1.save()
 publisher2.save()
+publisher3.save()
+publisher4.save()
+
+author1 = Author.new({
+  "first_name" => "Charlotte",
+  "last_name" => "Bronte",
+  "publisher_id" => publisher1.id
+  })
+
+author2 = Author.new({
+  "first_name" => "Bram",
+  "last_name" => "Stoker",
+  "publisher_id" => publisher4.id
+  })
+
+author1.save()
+author2.save()
 
 book1 = Book.new({
     "name" => "Jane Eyre",
@@ -40,20 +65,18 @@ book2 = Book.new({
 book1.save()
 book2.save()
 
-author1 = Author.new({
-  "first_name" => "Charlotte",
-  "last_name" => "Bronte",
-  "publisher_id" => publisher1.id
-  })
-
-author1.save()
-
-author_books1 = Authors_books.new({
+authors_books1 = Authors_books.new({
   "author_id" => author1.id,
   "book_id" => book1.id
   })
 
-author_books1.save()
+authors_books2 = Authors_books.new({
+  "author_id" => author2.id,
+  "book_id" => book2.id
+  })
+
+authors_books1.save()
+authors_books2.save()
 
 
 
