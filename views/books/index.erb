@@ -14,7 +14,7 @@
   </tr>
   <% for book in @books %>
   <tr>
-    <td><a href="/books/<%= book.id %>"><%= book.name %></a></td>
+    <td><%= book.name %></td>
     <td>|</td>
     <td><%= book.description %></td>
     <td>|</td>
@@ -23,6 +23,8 @@
     <td><%= book.price %></td>
     <td>|</td>
     <td><%= book.cost %></td>
+    <td>|</td>
+    <td><a href="/books/<%= book.id %>">Edit</a></td>
   </tr>
   <% end %>
 </table>
