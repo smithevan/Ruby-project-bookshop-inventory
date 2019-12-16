@@ -1,3 +1,14 @@
+<nav class="navbar">
+  <ul>
+    <li>
+      <a href="/publisher/new/">Add New Publisher</a>
+    </li>
+    <li>
+      <a href="/publisher/delete">Delete Publisher</a>
+    </li>
+  </ul>
+</nav>
+
 <h1>Publishers</h1>
 
 <table>
@@ -6,7 +17,7 @@
     <th></th>
   </tr>
   <% for publisher in @publishers %>
-  <tr onclick="location.href='/publishers/<%= publisher.id %>'"><a href="/publishers/<%= publisher.id %>"></a>
+  <tr>
     <td><a href="/publishers/<%= publisher.id %>"><%= publisher.name %></a></td>
   </tr>
   <% end %>

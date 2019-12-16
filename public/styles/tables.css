@@ -17,13 +17,12 @@ table {
   border: 2px solid black;
   font-family: arial;
   background-color: lightgrey;
-
 }
 
 tr:hover{
-  background-color: lightblue;
+  background-color: rgb(130, 223, 171);
 }
 
 tr:first-child:hover {
-    background-color: lightgrey;
+  background-color: lightgrey;
 }

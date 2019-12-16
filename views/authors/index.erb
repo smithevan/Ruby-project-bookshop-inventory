@@ -1,3 +1,14 @@
+<nav class="navbar">
+  <ul>
+    <li>
+      <a href="/authors/new/">Add New Author</a>
+    </li>
+    <li>
+      <a href="/authors/delete">Delete Author</a>
+    </li>
+  </ul>
+</nav>
+
 <h1>Authors</h1>
 
 <table>
@@ -10,7 +21,7 @@
   <% for author in @authors %>
   <tr>
     <td><%= author.first_name %></td>
-    <td></td> 
+    <td></td>
     <td><%= author.last_name %></td>
   </tr>
   <% end %>

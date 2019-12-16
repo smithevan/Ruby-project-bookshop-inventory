@@ -1,3 +1,14 @@
+<nav class="navbar">
+  <ul>
+    <li>
+      <a href="/books/new">Add New Book</a>
+    </li>
+    <li>
+      <a href="/books/delete">Delete Book</a>
+    </li>
+  </ul>
+</nav>
+
 <h1>Books</h1>
 
 <table>
@@ -15,7 +26,7 @@
     <th>Cost</th>
   </tr>
   <% for book in @books %>
-  <tr onclick="location.href='/books/<%= book.id %>'"><a href="/books/<%= book.id %>"></a>
+  <tr>
     <td><%= book.authors[0].full_name if book.authors.length > 0%></td>
     <td>|</td>
     <td><%= book.name %></td>
@@ -27,8 +38,8 @@
     <td>£<%= book.price %></td>
     <td>|</td>
     <td>£<%= book.cost %></td>
+    <td>|</td>
+    <td><a format="button" href="/books/<%= book.id %>">Edit</td>
   </tr>
   <% end %>
 </table>
-<br><br><br>
-<a href="/books/new/">Add New Book</a>

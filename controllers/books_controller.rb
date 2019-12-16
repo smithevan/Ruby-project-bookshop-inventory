@@ -25,3 +25,9 @@ post '/books/:id' do
   Book.new(params).update
   redirect to '/books'
 end
+
+post '/books' do
+  @books = Book.new( params )
+  @books.save()
+  erb ( :create )
+end
