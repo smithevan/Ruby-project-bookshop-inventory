@@ -12,6 +12,11 @@ get '/books' do
 end
 
 get '/books/:id' do
-  @book = Book.find(params['id'].to_i)
+  @books = Book.find(params['id'].to_i)
   erb(:"books/show")
+end
+
+post '/books/:id' do
+  Book.new(params).update
+  redirect to '/books'
 end
