@@ -2,7 +2,9 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Author</th>
+    <th></th>
+    <th>Title</th>
     <th></th>
     <th>Description</th>
     <th></th>
@@ -14,15 +16,17 @@
   </tr>
   <% for book in @books %>
   <tr>
+    <td><%= book.author[0]%></td>
+    <td>|</td>
     <td><%= book.name %></td>
     <td>|</td>
     <td><%= book.description %></td>
     <td>|</td>
     <td><%= book.quantity %></td>
     <td>|</td>
-    <td><%= book.price %></td>
+    <td>£<%= book.price %></td>
     <td>|</td>
-    <td><%= book.cost %></td>
+    <td>£<%= book.cost %></td>
     <td>|</td>
     <td><a href="/books/<%= book.id %>">Edit</a></td>
   </tr>

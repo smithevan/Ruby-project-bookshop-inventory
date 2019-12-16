@@ -11,6 +11,11 @@ get '/books' do
   erb ( :"books/index" )
 end
 
+get '/books/new' do
+  @book = Book.all
+  erb ( :"books/new" )
+end
+
 get '/books/:id' do
   @books = Book.find(params['id'].to_i)
   erb(:"books/show")
