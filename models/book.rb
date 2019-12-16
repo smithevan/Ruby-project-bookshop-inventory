@@ -53,7 +53,7 @@ class Book
     SqlRunner.run(sql, values)
   end
 
-  def author()
+  def authors()
     sql = "SELECT authors.* FROM authors
           INNER JOIN authors_books ON authors_books.author_id = authors.id
           WHERE book_id = $1;"
