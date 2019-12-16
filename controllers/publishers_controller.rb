@@ -24,3 +24,9 @@ post '/publishers/:id' do
   Publisher.new(params).update
   redirect to '/publishers'
 end
+
+post '/publishers' do
+  books = Publisher.new( params )
+  books.save()
+  redirect to '/publishers'
+end

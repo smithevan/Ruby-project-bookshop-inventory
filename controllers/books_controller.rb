@@ -4,6 +4,7 @@ require( 'pry' )
 require_relative( '../models/book.rb' )
 require_relative( '../models/publisher.rb' )
 require_relative( '../models/author.rb' )
+require_relative( '../models/authors_books.rb' )
 also_reload( '../models/*' )
 
 get '/books' do
@@ -12,7 +13,8 @@ get '/books' do
 end
 
 get '/books/new' do
-  # @author = Author.all()
+  @authors = Author.all()
+  @authors_books = Authors_books.all()
   erb ( :"books/new" )
 end
 

@@ -22,7 +22,7 @@ class Authors_books
   def self.all()
     sql = "SELECT * FROM authors_books"
     results = SqlRunner.run( sql )
-    return results.map { |author_books| Author_books.new( author_books ) }
+    return results.map { |author_books| Authors_books.new( author_books ) }
   end
 
   def self.delete_all()

@@ -51,6 +51,14 @@ class Author
     return "#{@first_name} #{@last_name}"
   end
 
+  def self.find( id )
+    sql = "SELECT * FROM authors
+    WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run( sql, values )
+    return Book.new( results.first )
+  end
+
 
 
 end

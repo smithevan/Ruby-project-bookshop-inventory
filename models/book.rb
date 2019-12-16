@@ -62,7 +62,7 @@ class Book
     return results.map {|author_hash| Author.new(author_hash)}
   end
 
-  def publisher()
+  def publishers()
     sql = "SELECT publishers.* FROM publishers
           INNER JOIN authors ON authors.publisher_id = publishers.id
           INNER JOIN authors_books ON authors_books.author_id = authors.id
