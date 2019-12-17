@@ -3,5 +3,10 @@
   <input type="text" name="first_name" id="first-name" value="">
   <label for="last-name">Last Name</label>
   <input type="text" name="last_name" id="last-name" value="">
+  <select name="publisher_id" id="publisher-select">
+  <% for publisher in @publishers%>
+  <option value="<%=publisher.id%>"><%= publisher.name %></option>
+  <% end %>
+</select>
       <input type="submit" value="Update Author">
 </form>

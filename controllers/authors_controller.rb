@@ -13,6 +13,7 @@ get '/authors' do
 end
 
 get '/authors/new' do
+  @publishers = Publisher.all()
   erb ( :"authors/new" )
 end
 
@@ -22,6 +23,7 @@ get '/authors/:id' do
 end
 
 post '/authors' do
+
   author = Author.new( params )
   author.save()
   redirect to '/authors'
