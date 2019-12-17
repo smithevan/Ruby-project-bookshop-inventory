@@ -1,0 +1,7 @@
+<h1>Confirm Deletion</h1>
+
+<form method="post" action="/publishers/<%= @publisher.id %>/delete">
+  <label for="publisher-name">Publisher Name</label>
+  <input type="text" name="name" id="publisher-name" value="<%=@publisher.name%>">
+      <input type="submit" value="Delete Publisher">
+</form>

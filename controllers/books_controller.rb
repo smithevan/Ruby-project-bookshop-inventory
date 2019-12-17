@@ -30,7 +30,6 @@ end
 
 post '/books/:id/delete' do
   book = Book.find(params[:id])
-
   book.delete()
   redirect to '/books'
 end

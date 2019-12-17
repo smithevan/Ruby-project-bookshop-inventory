@@ -3,12 +3,6 @@
     <li>
       <a href="/publishers/new">Add New Publisher</a>
     </li>
-    <li>
-      <a href="/publishers/delete">Delete Publisher</a>
-    </li>
-    <li>
-      <a href="/publishers/edit">Edit Publisher</a>
-    </li>
   </ul>
 </nav>
 
@@ -23,7 +17,8 @@
   <tr>
     <td><%= publisher.name %></td>
     <td><a href="/publishers/<%= publisher.id %>">Edit</td>
-
+    <td>|</td>
+    <td><a href="/publishers/<%= publisher.id %>/delete">Delete</td>
   </tr>
   <% end %>
 </table>

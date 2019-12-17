@@ -15,9 +15,20 @@ get '/publishers/new/?' do
   erb ( :"publishers/new" )
 end
 
+get '/publishers/:id/delete' do
+  @publisher = Publisher.find(params['id'].to_i)
+  erb ( :"publishers/delete")
+end
+
 get '/publishers/:id' do
   @publishers = Publisher.find(params['id'].to_i)
   erb(:"publishers/show")
+end
+
+post '/publishers/:id/delete' do
+  publisher = Publisher.find(params[:id])
+  publisher.delete()
+  redirect to '/publishers'
 end
 
 post '/publishers/:id' do
@@ -26,7 +37,7 @@ post '/publishers/:id' do
 end
 
 post '/publishers' do
-  books = Publisher.new( params )
-  books.save()
+  publisher = Publisher.new( params )
+  publisher.save()
   redirect to '/publishers'
 end
