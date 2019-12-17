@@ -26,3 +26,7 @@ tr:hover{
 tr:first-child:hover {
   background-color: lightgrey;
 }
+
+.out-of-stock {
+  background-color: rgb(242, 141, 141);
+}

@@ -33,6 +33,11 @@ post '/authors/:id/delete' do
   redirect to '/authors'
 end
 
+post '/authors/:id' do
+  Author.new(params).update
+  redirect to '/authors'
+end
+
 post '/authors' do
 
   author = Author.new( params )

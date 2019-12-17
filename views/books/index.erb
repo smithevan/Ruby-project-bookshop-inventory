@@ -22,12 +22,20 @@
     <th></th>
     <th>Cost</th>
     <th></th>
+    <th>Margin</th>
+    <th></th>
     <th>Edit</th>
     <th></th>
     <th>Delete</th>
   </tr>
   <% for book in @books %>
-  <tr class = "books">
+  <tr class=<% if book.quantity == 0 %>
+    <%= "out-of-stock" %>
+    <% elsif book.quantity >= 3 %>
+    <%= "good-stock" %>
+    <% elsif book.quantity <= 3 %>
+    <%= "low-stock" %>
+    <% end %>>
     <td><%= book.authors[0].full_name if book.authors.length > 0%></td>
     <td>|</td>
     <td><%= book.name %></td>
@@ -36,9 +44,11 @@
     <td>|</td>
     <td><%= book.quantity %></td>
     <td>|</td>
-    <td>£<%= book.price %></td>
+    <td>£<%= sprintf("%.2f", book.price) %></td>
     <td>|</td>
-    <td>£<%= book.cost %></td>
+    <td>£<%= sprintf("%.2f", book.cost) %></td>
+    <td>|</td>
+    <td>£<%= sprintf("%.2f", book.price - book.cost)%> </td>
     <td>|</td>
     <td><a href="/books/<%= book.id %>">Edit</td>
     <td>|</td>
