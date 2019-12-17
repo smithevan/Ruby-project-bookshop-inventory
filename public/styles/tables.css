@@ -12,6 +12,7 @@ td {
 th {
   padding: 0px 20px 10px 0px;
   font-family: arial;
+  border: none;
 }
 
 table {
@@ -33,7 +34,7 @@ tr:first-child:hover {
 }
 
 .good-stock {
-
+  background-color: lightgrey; 
 }
 
 .low-stock {
