@@ -14,6 +14,8 @@
     <th></th>
     <th>Title</th>
     <th></th>
+    <th>Publisher</th>
+    <th></th>
     <th>Description</th>
     <th></th>
     <th>Quantity</th>
@@ -39,6 +41,8 @@
     <td><%= book.authors[0].full_name if book.authors.length > 0%></td>
     <td>|</td>
     <td><%= book.name %></td>
+    <td>|</td>
+    <td><%= book.publishers[0].name if book.publishers.length > 0 %></td>
     <td>|</td>
     <td><%= book.description %></td>
     <td>|</td>

@@ -62,12 +62,14 @@ class Book
     return results.map {|author_hash| Author.new(author_hash)}
   end
 
-  # def join_authors()
-  #   array = authors()
-  #   # loop through array
-  #   # add each autor into a string
-  #   # return string
-  # end
+  def join_authors()
+    array = authors()
+    authors_string = array.map { |author|  author.to_s }
+    return authors_string
+    # loop through array
+    # add each autor into a string
+    # return string
+  end
 
   def publishers()
     sql = "SELECT publishers.* FROM publishers

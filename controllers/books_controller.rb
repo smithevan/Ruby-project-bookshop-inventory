@@ -40,9 +40,9 @@ post '/books/:id' do
 end
 
 post '/books' do
-
   books = Book.new( params )
   books.save()
-  Authors_books.new(params[:author_id])
+  authors_books = Author.new(params)
+  authors_books.save()
   redirect to '/books'
 end
