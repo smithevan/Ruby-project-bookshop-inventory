@@ -29,5 +29,13 @@ tr:first-child:hover {
 }
 
 .out-of-stock {
-  background-color: rgb(242, 141, 141);
+  background-color: rgb(250, 200, 212);
+}
+
+.good-stock {
+
+}
+
+.low-stock {
+  background-color: rgb(223, 236, 182);
 }
