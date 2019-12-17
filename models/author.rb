@@ -9,7 +9,7 @@ class Author
     @id = options['id'].to_i if options['id']
     @first_name = options['first_name']
     @last_name = options['last_name']
-    @publisher_id = options['publisher_id'].to_i
+    @publisher_id = options['publisher_id'].to_i if options['publisher_id']
   end
 
   def save()
