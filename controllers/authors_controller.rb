@@ -23,6 +23,7 @@ get '/authors/:id/delete' do
 end
 
 get '/authors/:id' do
+  @publishers = Publisher.all()
   @authors = Author.find(params['id'].to_i)
   erb(:"authors/show")
 end
@@ -34,9 +35,7 @@ post '/authors/:id/delete' do
 end
 
 post '/authors/:id' do
-
   Author.new(params).update
-
   redirect to '/authors'
 end
 
