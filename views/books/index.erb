@@ -6,6 +6,9 @@
     <li>
       <a href="/books/delete">Delete Book</a>
     </li>
+    <li>
+      <a href="/books/edit">Edit Book</a>
+    </li>
   </ul>
 </nav>
 
@@ -40,6 +43,8 @@
     <td>£<%= book.cost %></td>
     <td>|</td>
     <td><a href="/books/<%= book.id %>">Edit</td>
+    <td>|</td>
+    <td><input type="radio" name="book" value="<%= book.id%>"> Select</td>
   </tr>
   <% end %>
 </table>

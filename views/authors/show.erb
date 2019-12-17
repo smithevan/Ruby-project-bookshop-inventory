@@ -1,1 +1,7 @@
-
+<form method="post" action="/authors/<%= @authors.id %>">
+  <label for="author-first-name">First Name</label>
+  <input type="text" name="first_name" id="author-first-name" value="<%=@authors.first_name%>">
+  <label for="author-last-name">First Name</label>
+  <input type="text" name="last_name" id="author-last-name" value="<%=@authors.last_name%>">
+      <input type="submit" value="Update Author">
+</form>
