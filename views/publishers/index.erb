@@ -19,6 +19,7 @@
   <% for publisher in @publishers %>
   <tr>
     <td><%= publisher.name %></td>
+    <td><a href="/publishers/<%= publisher.id %>">Edit</td>
   </tr>
   <% end %>
 </table>
