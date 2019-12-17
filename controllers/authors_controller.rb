@@ -16,10 +16,10 @@ get '/authors/new' do
   erb ( :"authors/new" )
 end
 
-# get '/authors/:id' do
-#   @authors = Author.find(params['id'].to_i)
-#   erb(:"authors/show")
-# end
+get '/authors/:id' do
+  @authors = Author.find(params['id'].to_i)
+  erb(:"authors/show")
+end
 
 post '/authors' do
   author = Author.new( params )
