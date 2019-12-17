@@ -62,7 +62,7 @@ class Book
     return results.map {|author_hash| Author.new(author_hash)}
   end
 
-  # def join_authors() 
+  # def join_authors()
   #   array = authors()
   #   # loop through array
   #   # add each autor into a string

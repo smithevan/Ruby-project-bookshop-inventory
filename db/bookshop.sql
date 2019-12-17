@@ -31,6 +31,6 @@ CREATE TABLE authors
 CREATE TABLE authors_books
 (
   id SERIAL primary key,
-  author_id INT NOT NULL references authors(id),
-  book_id INT NOT NULL references books(id)
+  author_id INT NOT NULL references authors(id) ON DELETE CASCADE,
+  book_id INT NOT NULL references books(id) ON DELETE CASCADE 
 )
