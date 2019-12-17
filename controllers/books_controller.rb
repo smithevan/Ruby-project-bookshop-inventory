@@ -18,6 +18,11 @@ get '/books/new' do
   erb ( :"books/new" )
 end
 
+get '/books/:id/delete' do
+  @books = Book.find(params['id'].to_i)
+  erb ( :"books/delete")
+end
+
 get '/books/:id' do
   @books = Book.find(params['id'].to_i)
   erb(:"books/show")
@@ -31,5 +36,11 @@ end
 post '/books' do
   books = Book.new( params )
   books.save()
+  redirect to '/books'
+end
+
+post '/books/:id/delete' do
+  book = Book.find(params[:id])
+  book.delete
   redirect to '/books'
 end

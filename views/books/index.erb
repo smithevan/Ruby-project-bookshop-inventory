@@ -3,12 +3,6 @@
     <li>
       <a href="/books/new">Add New Book</a>
     </li>
-    <li>
-      <a href="/books/delete">Delete Book</a>
-    </li>
-    <li>
-      <a href="/books/edit">Edit Book</a>
-    </li>
   </ul>
 </nav>
 
@@ -27,6 +21,10 @@
     <th>Price</th>
     <th></th>
     <th>Cost</th>
+    <th></th>
+    <th>Edit</th>
+    <th></th>
+    <th>Delete</th>
   </tr>
   <% for book in @books %>
   <tr class = "books">
@@ -44,7 +42,7 @@
     <td>|</td>
     <td><a href="/books/<%= book.id %>">Edit</td>
     <td>|</td>
-    <td><input type="radio" name="book" value="<%= book.id%>"> Select</td>
+    <td><a href="/books/<%= book.id %>/delete">Delete</td>
   </tr>
   <% end %>
 </table>
