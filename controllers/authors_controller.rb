@@ -17,9 +17,20 @@ get '/authors/new' do
   erb ( :"authors/new" )
 end
 
+get '/authors/:id/delete' do
+  @author_delete = Author.find(params['id'].to_i)
+  erb ( :"authors/delete")
+end
+
 get '/authors/:id' do
   @authors = Author.find(params['id'].to_i)
   erb(:"authors/show")
+end
+
+post '/authors/:id/delete' do
+  author = Author.find(params[:id])
+  author.delete()
+  redirect to '/authors'
 end
 
 post '/authors' do

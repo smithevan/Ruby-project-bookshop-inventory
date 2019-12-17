@@ -55,8 +55,8 @@ class Author
     sql = "SELECT * FROM authors
     WHERE id = $1"
     values = [id]
-    results = SqlRunner.run( sql, values )
-    return Book.new( results.first )
+    results = SqlRunner.run( sql, values ).first
+    return Author.new(results)
   end
 
 

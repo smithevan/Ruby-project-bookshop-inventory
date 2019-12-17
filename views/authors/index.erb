@@ -3,12 +3,6 @@
     <li>
       <a href="/authors/new">Add New Author</a>
     </li>
-    <li>
-      <a href="/authors/delete">Delete Author</a>
-    </li>
-    <li>
-      <a href="/authors/edit">Edit Author</a>
-    </li>
   </ul>
 </nav>
 
@@ -28,6 +22,8 @@
     <td><%= author.last_name %></td>
     <td>|</td>
     <td><a href="/authors/<%= author.id %>">Edit</td>
+    <td>|</td>
+    <td><a href="/authors/<%= author.id %>/delete">Delete</td>
   </tr>
   <% end %>
 </table>
