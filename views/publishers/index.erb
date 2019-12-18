@@ -12,10 +12,14 @@
   <tr>
     <th>Name</th>
     <th></th>
+    <th>Edit Publisher</th>
+    <th></th>
+    <th>Delete Publisher</th>
   </tr>
   <% for publisher in @publishers %>
   <tr>
     <td><%= publisher.name %></td>
+    <td>|</td>
     <td><a href="/publishers/<%= publisher.id %>">Edit</td>
     <td>|</td>
     <td><a href="/publishers/<%= publisher.id %>/delete">Delete</td>
