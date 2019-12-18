@@ -64,10 +64,10 @@ class Book
 
   def join_authors()
     array = authors()
-    authors_string = array.map { |author|  author.to_s }
-    return authors_string
+    authors_name_array= array.map { |author|  author.full_name}
+    return authors_name_array.join(", ")
     # loop through array
-    # add each autor into a string
+    # add each author into a string
     # return string
   end
 
