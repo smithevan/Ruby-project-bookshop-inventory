@@ -12,7 +12,12 @@ table a {
   color: black;
   padding: 5px 5px 5px 5px;
   text-decoration: none;
-  background-color: rgb(130, 223, 171);
+  background-color: rgb(235, 255, 247);
+}
+
+table a:active {
+  position: relative;
+  bottom: 2px;
 }
 
 th {
