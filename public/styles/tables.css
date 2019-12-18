@@ -50,3 +50,27 @@ tr:first-child:hover {
 .low-stock {
   background-color: rgb(223, 236, 182);
 }
+
+.author {
+  border: 2px solid black;
+  font-family: arial;
+  font-size: 22px;
+  background-color: rgb(228, 228, 228);
+  border-collapse: collapse;
+}
+
+.author tr {
+  height: 60px;
+}
+
+.publisher {
+  border: 2px solid black;
+  font-family: arial;
+  font-size: 22px;
+  background-color: rgb(228, 228, 228);
+  border-collapse: collapse;
+}
+
+.publisher tr {
+  height: 60px;
+}

@@ -50,7 +50,7 @@ author2 = Author.new({
 
 author3 = Author.new({
   "first_name" => "Neil",
-  "last_name" => "gaiman",
+  "last_name" => "Gaiman",
   "publisher_id" => publisher4.id
   })
 
