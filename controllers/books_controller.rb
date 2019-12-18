@@ -47,6 +47,3 @@ post '/books' do
   authors_books.save()
   redirect to '/books'
 end
-
-# "author_id" => author3.id,
-# "book_id" => book3.id
