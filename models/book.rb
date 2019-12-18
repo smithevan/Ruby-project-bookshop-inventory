@@ -66,9 +66,6 @@ class Book
     array = authors()
     authors_name_array= array.map { |author|  author.full_name}
     return authors_name_array.join(", ")
-    # loop through array
-    # add each author into a string
-    # return string
   end
 
   def publishers()
