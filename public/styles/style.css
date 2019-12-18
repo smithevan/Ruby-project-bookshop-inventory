@@ -1,7 +1,30 @@
 h1 {
   font-family: arial;
+  font-size: 80px;
+}
+
+h2 {
+  font-family: arial;
+  font-size: 40px;
 }
 
 .main {
-  background-color: rgb(175, 210, 197);
+  background: rgb(175, 210, 197)url('/images/william_m.jpg');
 }
+
+/* input[type="submit"] {
+  text-transform: uppercase;
+  font-family: 'Special Elite', cursive;
+}
+
+select {
+ width: 150px;
+ padding: 5px 35px 5px 5px;
+ margin: 15px 0;
+ font-size: 0.8em;
+ -webkit-appearance: none;
+ background: url('/images/hazard.png') 96% / 15% no-repeat papayawhip;
+ font-family: 'Merriweather', serif;
+ border: 1px solid #eee;
+ display: block;
+}  */
